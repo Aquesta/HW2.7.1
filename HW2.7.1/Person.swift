@@ -27,12 +27,12 @@ extension Person {
         let surnames = DataManager.shared.surnames.shuffled()
         let phones = DataManager.shared.phones.shuffled()
         let mails = DataManager.shared.mails.shuffled()
-
+        
         for item in 0..<names.count {
             let person = Person(name: names[item],
-                           surname: surnames[item],
-                           phone: phones[item],
-                           mail: mails[item])
+                                surname: surnames[item],
+                                phone: phones[item],
+                                mail: mails[item])
             persons.append(person)
         }
         return persons

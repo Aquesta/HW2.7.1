@@ -21,6 +21,6 @@ class PersonDetailsViewController: UIViewController {
         phoneOutlet.text = person.phone
         mailOutlet.text = person.mail
         
-        self.navigationItem.title = person.fullName        
+        navigationItem.title = person.fullName        
     }
 }

@@ -12,12 +12,6 @@ class PersonsListTableViewController: UITableViewController {
     
     var persons: [Person]!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.navigationItem.title = "Persons List"
-    }
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         persons.count
     }

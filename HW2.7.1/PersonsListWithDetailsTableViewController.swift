@@ -9,30 +9,21 @@
 import UIKit
 
 class PersonsListWithDetailsTableViewController: UITableViewController {
-
+    
     var persons: [Person]!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-    // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return persons.count
+        persons.count
     }
-//
+    
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let person = persons[section]
         return person.fullName
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         2
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell", for: indexPath)
@@ -48,5 +39,4 @@ class PersonsListWithDetailsTableViewController: UITableViewController {
         }
         return cell
     }
-
 }
